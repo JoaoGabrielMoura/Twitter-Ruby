@@ -6,7 +6,7 @@ volumes:
 
 services:
   web:
-    image: ruby:2.2
+    image: kurenn/docker-webkit
     working_dir: /usr/src/app
     command: rails server -b 0.0.0.0
     ports:

@@ -19,20 +19,21 @@ group :development do
 end
 
 group :production do
-    gem 'pg'
+  gem 'pg'
 end
 
 group :development, :test do
- gem 'byebug'
- gem 'factory_girl_rails'
- gem "ffaker"
- gem 'sqlite3'
+  gem 'byebug'
+  gem 'factory_girl_rails'
+  gem "ffaker"
+  gem 'sqlite3'
 end
 
 group :test do
- gem 'rspec-rails'
- gem "shoulda-matchers", "~> 3.0"
- gem "rspec-collection_matchers"
- gem "capybara"
- gem "database_cleaner"
+  gem 'rspec-rails'
+  gem "shoulda-matchers", "~> 3.0"
+  gem "rspec-collection_matchers"
+  gem "capybara"
+  gem "capybara-webkit"
+  gem "database_cleaner"
 end
