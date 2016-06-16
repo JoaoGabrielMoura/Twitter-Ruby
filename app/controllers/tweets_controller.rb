@@ -8,7 +8,7 @@ class TweetsController < ApplicationController
   end
 
   def show
-    @tweet = Tweet.find(params[:id])
+    @tweet = current_user.tweets.find(params[:id])
   end
 
   def new
@@ -55,6 +55,6 @@ class TweetsController < ApplicationController
     end
 
     def correct_user!
-      redirect_to root_path if !current_user.tweet_ids.include? params[:id]
+      redirect_to root_path if !current_user.tweet_ids.include? params[:id].to_i
     end
 end
